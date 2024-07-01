@@ -1,0 +1,8 @@
+.description ul, .detail ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.description a {
+    color: blue;
+}
