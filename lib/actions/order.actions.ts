@@ -189,7 +189,8 @@ export async function createPayMobOrder(
       const { Id, paymentLink } = await paymob.createOrder2(
         Number(order.totalPrice),
         orderItems,
-        shippingAddress
+        shippingAddress,
+        orderId
       );
       await db
         .update(orders)
@@ -228,6 +229,7 @@ export const updateOrderToPaid = async ({
     where: eq(orders.id, orderId),
     with: { orderItems: true },
   });
+  console.log(order)
   if (!order) throw new Error("Order not found");
   if (order.isPaid) throw new Error("Order is already paid");
   await db.transaction(async (tx) => {

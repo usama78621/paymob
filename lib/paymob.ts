@@ -21,7 +21,8 @@ export const paymob = {
   createOrder2: async function (
     amount: number,
     orderItems: any,
-    shippingAddress: any
+    shippingAddress: any,
+    merchant_order_id:string
   ) {
     // Ensure amount is typed as a number
     const amount_cents = amount * 100; // Convert amount to cents
@@ -35,6 +36,7 @@ export const paymob = {
       auth_token: accessToken,
       delivery_needed: false,
       amount_cents,
+      merchant_order_id: merchant_order_id,
       currency: "USD",
       items: [],
     };
