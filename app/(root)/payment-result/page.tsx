@@ -29,13 +29,13 @@ const PaymentResult = () => {
 
   useEffect(() => {
     if (queryParams && queryParams.order) {
-      const paymentResult = {
+      const paymentResult23 = {
         id: queryParams.id || '',
         pricePaid: queryParams.amount_cents ? String(queryParams.amount_cents) : '0',
         status: queryParams.success || '',
         email_address: queryParams.email_address || '', // Provide a default or handle accordingly
       };
-      updateOrderToPaid({ orderId: queryParams.order, paymentResult })
+      updateOrderToPaid({ orderId: queryParams.order, paymentResult: paymentResult23 })
         .then(() => {
           console.log('Order updated to paid');
         })

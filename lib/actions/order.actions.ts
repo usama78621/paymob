@@ -223,7 +223,6 @@ export const updateOrderToPaid = async ({
   orderId: string;
   paymentResult?: PaymentResult;
 }) => {
-  console.log('kgjdsrjnjksdnfjjnefnsejk')
   const order = await db.query.orders.findFirst({
     columns: { isPaid: true },
     where: eq(orders.id, orderId),
