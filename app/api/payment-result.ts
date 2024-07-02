@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { status, transaction_id, amount } = req.query;
-
+console.log('dsjkrgnjkadrjnjrjnjrj')
     // Handle the transaction result based on the status and other parameters
     let message = '';
     if (status === 'success') {
