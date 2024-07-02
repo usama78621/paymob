@@ -35,7 +35,7 @@ const PaymentResult = () => {
         status: queryParams.success || '',
         email_address: queryParams.email_address || '', // Provide a default or handle accordingly
       };
-      updateOrderToPaid({ orderId: queryParams.order, paymentResult: paymentResult23 })
+      updateOrderToPaid({ orderId: 'a27adc8c-832b-42ab-afce-fe4e6f82fd13', paymentResult: paymentResult23 })
         .then(() => {
           console.log('Order updated to paid');
         })
