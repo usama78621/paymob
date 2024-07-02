@@ -1,7 +1,5 @@
 "use client";
-import dynamic from 'next/dynamic';
 import { useParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
 export default function PaymentResult() {
   const params = useParams()
