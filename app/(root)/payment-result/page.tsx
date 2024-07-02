@@ -70,7 +70,6 @@ const PaymentResult = () => {
       ) : (
         <h2 style={{ color: 'red' }}>Your payment failed: {message}</h2>
       )}
-      <pre>{JSON.stringify(queryParams, null, 2)}</pre>
     </div>
   );
 };
