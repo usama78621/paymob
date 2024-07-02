@@ -8,9 +8,9 @@ export default function PaymentResult() {
 
   return (
     <div>
-      <p>Transaction ID: </p>
+      <p>Transaction ID </p>
     </div>
-  );
-};
+  )
+}
 
 
